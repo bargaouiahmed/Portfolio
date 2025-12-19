@@ -1,0 +1,131 @@
+.introduction-container {
+  padding: 2rem 0;
+}
+
+.introduction-text {
+  margin-bottom: 2rem;
+  font-family: var(--font-family);
+  color: var(--text-primary);
+}
+
+.intro-strong {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--text-primary);
+  background: transparent;
+  padding: 0;
+}
+
+/* Credentials (email, github) */
+.credentials {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 0.6rem 0 1rem 0;
+  flex-wrap: wrap;
+}
+.cred-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.7rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform var(--transition-speed), background var(--transition-speed), color var(--transition-speed);
+}
+.cred-pill:hover { transform: translateY(-3px); color: var(--text-primary); background: linear-gradient(90deg, rgba(6,182,212,0.03), rgba(212,175,55,0.02)); border-color: rgba(6,182,212,0.06); }
+
+@media (max-width: 480px) {
+  .credentials { gap: 0.4rem; }
+  .cred-pill { font-size: 0.9rem; padding: 0.35rem 0.6rem; }
+}
+
+/* Profile image styling */
+.introduction-image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border: 2px solid rgba(11,114,168,0.12); /* subtle dark-blue ring */
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+
+.introduction-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.introduction-image-container:hover .introduction-image { transform: scale(1.03); filter: none; }
+
+@media (max-width: 720px) {
+  .introduction-image-container { width: 72px; height: 72px; }
+}
+
+.journey-toggle {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.journey-toggle:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.software-journey {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sharp);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: visible;
+}
+
+.software-journey h1 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.software-journey h2 {
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.software-journey p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.close-button {
+  background-color: var(--text-secondary);
+  color: var(--bg-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  transition: background-color var(--transition-speed);
+}
+
+.close-button:hover {
+  background-color: var(--text-primary);
+}
+
+/* Top and bottom icon toggles inside the journey card */
+.software-journey .bottom-actions { display: flex; justify-content: flex-end; margin-top: 1rem; }
+.software-journey .bottom-close { width: 36px; height: 36px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.03); }
+.software-journey .bottom-close:hover { background: rgba(6,182,212,0.04); }

@@ -1,0 +1,29 @@
+.sidebar{
+    border-right: 2px solid rgb(255, 255, 255);
+    padding-right:3px;
+}
+
+@media (max-width: 720px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+        padding: 0 0.5rem;
+    }
+
+    .sidebar {
+        grid-column: 1;
+        grid-row: 2;
+        border-right: none;
+        border-top: 2px solid rgb(255, 255, 255);
+        padding-top: 1rem;
+    }
+
+    .main-intro {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .main-projects {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
