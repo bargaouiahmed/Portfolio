@@ -1,0 +1,7 @@
+.tech-content { display:flex; flex-direction:column; gap:0.6rem; }
+.tech-category h3 { margin: 0 0 0.35rem 0; font-size: 0.95rem; color: var(--accent-color); }
+.tech-list { display:flex; flex-wrap:wrap; gap:0.45rem; }
+.tech-list span { background: rgba(255,255,255,0.03); padding: 0.4rem 0.75rem; border-radius: 999px; font-size: 0.96rem; color: var(--text-primary); border: 1px solid rgba(255,255,255,0.06); font-weight: 500; }
+.tech-list span:hover { color: var(--text-primary); transform: translateY(-3px); box-shadow: 0 6px 18px rgba(2,6,23,0.45); }
+
+@media (max-width:720px){ .tech-list span{ font-size:0.86rem; padding:0.3rem 0.5rem } }

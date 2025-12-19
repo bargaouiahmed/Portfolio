@@ -1,6 +1,7 @@
 import Introduction from "./Components/Introduction/Introduction";
 import Courses from "./Components/Courses/Courses";
 import Education from "./Components/Education/Education";
+import Technologies from "./Components/Technologies/Technologies";
 import Projects from "./Components/Projects/Projects";
 import "./App.css"
 import { useEffect } from 'react';
@@ -44,6 +45,7 @@ export default function App(){
         </div>
 
         <aside className="sidebar">
+          <Technologies/>
           <Courses/>
           <Education/>
         </aside>
