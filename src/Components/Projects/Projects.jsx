@@ -20,12 +20,27 @@ import in2 from '../../assets/projects/inofa/in2.png';
 import in3 from '../../assets/projects/inofa/in3.png';
 import in4 from '../../assets/projects/inofa/in4.png';
 
+import bo1 from '../../assets/projects/bookini/bo1.png';
+import bo2 from '../../assets/projects/bookini/bo2.png';
+import bo3 from '../../assets/projects/bookini/bo3.png';
+import bo4 from '../../assets/projects/bookini/bo4.png';
+import bo5 from '../../assets/projects/bookini/bo5.png';
+import bo6 from '../../assets/projects/bookini/bo6.png';
+import bo7 from '../../assets/projects/bookini/bo7.png';
+import bo8 from '../../assets/projects/bookini/bo8.png';
+import bo9 from '../../assets/projects/bookini/bo9.png';
+
 export default function Projects() {
     const projects = [
            {
             name: 'Inofa',
             description: 'Inofa is the MVP for a an Ai fashion startup, it has 6 main features, rate outfit, color coherernce, virtual try on, style suggestion, model generation, and pose editing',
             images: [in1, in2, in3, in4]
+        },
+            {
+            name: 'Bookini',
+            description: 'Bookini aims to solve the problem of scheduling and organisation, by providing users with a shareable calendar where they can add their events, tasks, and deadlines, and share them with their friends and colleagues. it also allows such collegues to book the user\'s free time slots directly from the calendar. this app has a robust realtime communication system for realtime notifications and events and synchronization',
+            images: [bo1, bo2, bo3, bo4, bo5, bo6, bo7, bo8, bo9]
         },
         {
             name: 'Cute Mp3 Player',
