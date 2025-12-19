@@ -3,7 +3,36 @@
 .project-title { margin: 0 0 0.5rem 0; font-size: 1.05rem; }
 .project-description { color: var(--text-secondary); margin-bottom: 0.75rem; }
 
-.project-slider { display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.project-slider { display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.project-slider {
+  /* Prefer a thin, subtle scrollbar that matches dark theme */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255,255,255,0.12) transparent; /* Firefox thumb then track */
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) - horizontal scrollbar styling */
+.project-slider::-webkit-scrollbar {
+  height: 10px;
+}
+.project-slider::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 3px 0;
+  border-radius: 999px;
+}
+.project-slider::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08));
+  border-radius: 999px;
+  border: 2px solid rgba(0,0,0,0);
+  min-width: 44px;
+}
+.project-slider::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Make the scrollbar less prominent until the user interacts */
+.project-slider { --sb-thumb: rgba(255,255,255,0.12); }
+.project-slider::-webkit-scrollbar-thumb { opacity: 0.9; transition: background 160ms ease, opacity 160ms ease; }
+.project-slider:not(:hover)::-webkit-scrollbar-thumb { opacity: 0.7; }
 .project-image-wrap { flex: 0 0 auto; scroll-snap-align: start; }
 .project-image { display: block; width: 240px; aspect-ratio: 16/9; height: auto; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.22s ease, box-shadow 0.22s ease; border: 1px solid rgba(255,255,255,0.04); max-width: 100%; }
 .project-image:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.6); }
